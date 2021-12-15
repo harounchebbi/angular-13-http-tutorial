@@ -1,0 +1,22 @@
+<label>Search by name </label>
+<input type="text" #searchBox (input)="search(searchBox.value)" />
+
+
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Company</th>
+  </tr>
+  <tr *ngFor="let user of filteredUsers">
+    <td>{{user.name}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.address.city}}</td>
+    <td>{{user.phone}}</td>
+    <td>{{user.company.name}}</td>
+  </tr>
+</table>

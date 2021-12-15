@@ -1,7 +1,11 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { NgModule } from '@angular/core';
+import { UsersTableComponent } from './components/users-table/users-table.component';
+
+const routes: Routes = [
+  {path : '' , component : UsersTableComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
